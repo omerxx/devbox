@@ -8,11 +8,11 @@ Devbox now supports [nushell](https://github.com/nushell/nushell) through the `-
 
 ```nushell
 devbox global shellenv --format nushell --preserve-path-stack -r
-  | lines 
+  | lines
   | parse "$env.{name} = \"{value}\""
-  | where name != null 
-  | transpose -r 
-  | into record 
+  | where name != null
+  | transpose -r
+  | into record
   | load-env
 ```
 
